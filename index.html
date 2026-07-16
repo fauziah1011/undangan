@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Undangan Pernikahan Mewah Fauziah & Fulan</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        denim: {
+                            light: '#3b4d66',
+                            DEFAULT: '#162238',
+                            dark: '#0b111e',
+                        },
+                        softpink: {
+                            light: '#ffe4e6',
+                            DEFAULT: '#fbcfe8',
+                            dark: '#f472b6',
+                        },
+                        gold: {
+                            light: '#fef08a',
+                            DEFAULT: '#eab308',
+                            dark: '#854d0e'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght=0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #060a12;
+            overflow-x: hidden;
+        }
+
+        .font-serif-elegant {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #fbcfe8;
+            border-radius: 2px;
+        }
+
+        /* ANIMASI REVEAL */
+        .reveal-section {
+            opacity: 0;
+            transform: translateY(30px) scale(0.97);
+            filter: blur(3px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .reveal-section.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0px);
+        }
+
+        .reveal-section .anim-font {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+        }
+
+        .reveal-section.visible .anim-font {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-tab {
+            transition: all 0.3s;
+        }
+        .nav-tab.active {
+            color: #fbcfe8;
+            text-shadow: 0 0 8px rgba(251, 207, 232, 0.6);
+        }
+
+        /* AMBIENT WEDDING PARTICLES */
+        .wedding-bg-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .wp-particle {
+            position: absolute;
+            background: linear-gradient(135deg, #fbcfe8, #fef08a);
+            border-radius: 50% 0 50% 50%;
+            opacity: 0;
+            animation: floatUp 12s infinite linear;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(105vh) rotate(0deg) scale(0.6); opacity: 0; }
+            20% { opacity: 0.4; }
+            80% { opacity: 0.4; }
+            100% { transform: translateY(-5vh) rotate(720deg) scale(1); opacity: 0; }
+        }
+
+        /* ORNAMEN BINGKAI MEWAH GANDA */
+        .luxury-frame {
+            position: absolute;
+            inset: 12px;
+            border: 1px solid rgba(251, 207, 232, 0.12);
+            pointer-events: none;
+            border-radius: 20px;
+        }
+
+        .luxury-corner {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #fbcfe8;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        .lc-tl { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+        .lc-tr { top: 6px; right: 6px; border-left: none; border-bottom: none; }
+        .lc-bl { bottom: 6px; left: 6px; border-right: none; border-top: none; }
+        .lc-br { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+
+        .glow-line {
+            box-shadow: 0 0 10px rgba(251, 207, 232, 0.3);
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-start min-h-screen text-slate-100 pb-24">
+
+    <!-- OVERLAY COVER PEMBUKA -->
+    <div id="welcomeOverlay" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-denim-dark text-center px-6 transition-all duration-1000">
+        <div class="absolute inset-0 bg-gradient-to-tr from-denim via-denim-dark to-[#2c1326] opacity-95 pointer-events-none"></div>
+        
+        <!-- Ornamen Bingkai -->
+        <div class="absolute inset-6 border border-softpink/20 rounded-[28px] pointer-events-none"></div>
+        <div class="absolute inset-8 border border-gold/10 rounded-[24px] pointer-events-none"></div>
+
+        <!-- Desain Grafis Dedaunan Sudut Simetris -->
+        <div class="absolute top-10 right-10 text-gold/20 text-4xl transform rotate-45"><i class="fa-solid fa-spa"></i></div>
+        <div class="absolute bottom-10 left-10 text-softpink/20 text-4xl transform -rotate-135"><i class="fa-solid fa-spa"></i></div>
+
+        <div class="z-10 space-y-5 w-full max-w-[400px] flex flex-col items-center">
+            <div class="flex items-center gap-2 text-gold-light animate-pulse">
+                <i class="fa-solid fa-leaf text-[10px]"></i>
+                <span class="text-[10px] uppercase tracking-[0.4em] text-softpink font-semibold">The Wedding Celebration</span>
+                <i class="fa-solid fa-leaf text-[10px]"></i>
+            </div>
+            
+            <div class="w-full my-1 px-2">
+                <h1 class="font-serif-elegant text-4xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-softpink via-white to-softpink drop-shadow-[0_4px_12px_rgba(251,207,232,0.4)]">Fauziah & Fulan</h1>
+            </div>
+
+            <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+
+            <!-- FOTO UTAMA COVER DENGAN BINGKAI LENGKUNG PREMIUM TRANSPARAN -->
+            <div class="py-2 relative">
+                <div class="w-28 h-36 rounded-t-full border border-softpink/40 mx-auto overflow-hidden p-1 shadow-[0_0_20px_rgba(251,207,232,0.15)] bg-transparent">
+                    <img src="cover.jpg" alt="Cover" class="w-full h-full object-cover rounded-t-full" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400'" />
+                </div>
+            </div>
+
+            <p class="text-[11px] text-slate-300 tracking-widest max-w-[280px] leading-relaxed">Tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Hadir Di Hari Bahagia Kami.</p>
+
+            <button onclick="startUndangan()" class="px-8 py-3 bg-gradient-to-r from-softpink via-rose-200 to-gold-light text-denim-dark text-xs font-bold rounded-full shadow-[0_4px_20px_rgba(251,207,232,0.4)] flex items-center gap-2.5 mx-auto hover:scale-105 active:scale-95 transition-all duration-300 glow-line">
+                <span>BUKA UNDANGAN</span>
+                <i class="fa-solid fa-envelope-open-text animate-pulse"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="relative w-full max-w-[440px] bg-denim-dark shadow-2xl border-x border-slate-800 min-h-screen flex flex-col justify-between overflow-x-hidden">
+        
+        <div class="absolute inset-0 bg-gradient-to-tr from-denim via-denim-dark to-[#2c1326] opacity-95 z-0 pointer-events-none"></div>
+        <div class="absolute top-20 left-6 w-60 h-60 bg-softpink-dark/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-40 right-6 w-60 h-60 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- STICKY AUDIO MUSIC CONTROLLER -->
+        <div class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] z-50 flex justify-between items-center bg-denim-dark/70 backdrop-blur-md py-2 px-5 rounded-full border border-softpink/30 shadow-[0_4px_15px_rgba(0,0,0,0.5)]">
+            <div class="flex items-center gap-3">
+                <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-softpink/20 to-gold/20 text-softpink border border-softpink/20" id="musicIconContainer">
+                    <i class="fa-solid fa-music text-xs"></i>
+                </div>
+                <div class="text-[10px] leading-tight">
+                    <p class="font-bold text-white tracking-wide">My Love</p>
+                    <p class="text-[8px] text-softpink/80">Westlife</p>
+                </div>
+            </div>
+            
+            <button onclick="toggleAudio()" class="w-8 h-8 rounded-full bg-gradient-to-r from-softpink to-rose-300 text-denim-dark flex items-center justify-center text-xs font-bold shadow-md transition hover:scale-105" id="audioCtrlBtn">
+                <i class="fa-solid fa-play" id="audioIcon"></i>
+            </button>
+        </div>
+
+        <!-- AUDIO PLAYER -->
+        <audio id="weddingBgm" loop preload="auto">
+            <source src="Westlife - My Love (Lyrics).mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="w-full flex flex-col z-10 pt-20 px-4 space-y-8">
+            
+            <!-- SEC 0: HOME -->
+            <section id="sec0" class="reveal-section min-h-[80vh] flex flex-col justify-center items-center text-center relative px-4 bg-denim/40 rounded-3xl border border-softpink/15 py-12 shadow-2xl overflow-hidden">
+                <div class="luxury-frame"></div>
+                <div class="luxury-corner lc-tl"></div><div class="luxury-corner lc-tr"></div>
+                <div class="luxury-corner lc-bl"></div><div class="luxury-corner lc-br"></div>
+                
+                <div class="absolute top-6 right-6 text-gold/15 text-2xl pointer-events-none"><i class="fa-solid fa-spa"></i></div>
+                <div class="absolute bottom-6 left-6 text-softpink/15 text-2xl pointer-events-none"><i class="fa-solid fa-spa transform rotate-180"></i></div>
+
+                <div class="wedding-bg-particles">
+                    <div class="wp-particle" style="width:8px; height:8px; left:10%; animation-delay:1s; background:#fbcfe8;"></div>
+                    <div class="wp-particle" style="width:5px; height:5px; left:40%; animation-delay:4s; background:#fef08a;"></div>
+                </div>
+
+                <div class="space-y-2 anim-font relative z-10">
+                    <div class="text-gold text-lg flex justify-center gap-2 opacity-80"><i class="fa-solid fa-leaf"></i><i class="fa-solid fa-heart text-xs text-softpink"></i><i class="fa-solid fa-leaf fa-flip-horizontal"></i></div>
+                    <span class="text-[10px] uppercase tracking-[0.35em] text-softpink font-bold">Walimatul 'Ursy</span>
+                    <div class="w-20 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
+                </div>
+
+                <!-- FOTO UTAMA HALAMAN DEPAN -->
+                <div class="my-6 relative w-36 h-48 rounded-t-full border border-gold/40 overflow-hidden flex items-center justify-center bg-transparent shadow-[0_0_20px_rgba(234,179,8,0.15)] p-1 z-10">
+                    <img src="cover.jpg" alt="Fauziah & Fulan" class="w-full h-full object-cover rounded-t-full" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=400'" />
+                </div>
+
+                <div class="w-full px-2 anim-font relative z-10 space-y-3">
+                    <h1 class="font-serif-elegant text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-white via-softpink to-rose-200 tracking-wide">Fauziah &amp; Fulan</h1>
+                    <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-softpink to-transparent mx-auto"></div>
+                    <p class="text-[10px] text-gold-light font-medium tracking-widest uppercase flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-leaf text-[9px]"></i> Sabtu, 28 November 2026 <i class="fa-solid fa-leaf text-[9px]"></i>
+                    </p>
+                </div>
+            </section>
+
+            <!-- SEC 1: QUOTES -->
+            <section id="sec1" class="reveal-section min-h-[45vh] flex flex-col justify-center items-center text-center relative px-6 bg-denim/40 rounded-3xl border border-softpink/15 py-12 shadow-2xl">
+                <div class="luxury-frame"></div>
+                <div class="luxury-corner lc-tl"></div><div class="luxury-corner lc-tr"></div>
+                <div class="luxury-corner lc-bl"></div><div class="luxury-corner lc-br"></div>
+
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-softpink/10 to-gold/10 border border-softpink/30 flex items-center justify-center text-gold mb-4 shadow-inner">
+                    <i class="fa-solid fa-spa text-sm"></i>
+                </div>
+                <div class="space-y-4 max-w-sm anim-font px-2">
+                    <p class="font-serif-elegant text-sm text-slate-200 italic leading-relaxed">
+                        "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+                    </p>
+                    <div class="flex justify-center items-center gap-2 text-[9px] font-bold text-gold uppercase tracking-widest">
+                        <div class="w-4 h-[1px] bg-gold/40"></div>
+                        <span>QS. Ar-Rum: 21</span>
+                        <div class="w-4 h-[1px] bg-gold/40"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 2: MEMPELAI -->
+            <section id="sec2" class="reveal-section min-h-[75vh] flex flex-col justify-center items-center text-center relative px-4 bg-denim/40 rounded-3xl border border-softpink/15 py-10 shadow-2xl">
+                <div class="luxury-frame"></div>
+                <div class="luxury-corner lc-tl"></div><div class="luxury-corner lc-tr"></div>
+                <div class="luxury-corner lc-bl"></div><div class="luxury-corner lc-br"></div>
+
+                <span class="text-[10px] uppercase tracking-[0.3em] text-gold font-bold mb-6 flex items-center gap-2 anim-font">
+                    <i class="fa-solid fa-spa text-[9px] text-softpink"></i> KEDUA MEMPELAI <i class="fa-solid fa-spa text-[9px] text-softpink"></i>
+                </span>
+                
+                <div class="w-full space-y-5 anim-font px-2 z-10">
+                    <!-- Mempelai Wanita DENGAN FOTO ELEGAN TRANSPARAN -->
+                    <div class="bg-gradient-to-b from-denim/90 via-denim/70 to-denim-dark/95 border border-softpink/20 rounded-2xl p-5 text-center shadow-xl relative overflow-hidden">
+                        <div class="absolute -right-3 -top-3 text-softpink/10 text-4xl"><i class="fa-solid fa-leaf"></i></div>
+                        
+                        <!-- Lingkaran Foto Pengantin Wanita -->
+                        <div class="w-16 h-16 rounded-full border border-softpink/40 p-0.5 mx-auto mb-3 shadow-md bg-transparent overflow-hidden">
+                            <img src="rahma.jpg" alt="Fauziah" class="w-full h-full rounded-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3656/3656836.png'" />
+                        </div>
+                        <h3 class="font-serif-elegant text-base font-bold text-softpink tracking-wide">Fauziah Rahmawati Sholehah</h3>
+                        <div class="w-12 h-[1px] bg-gold/30 mx-auto my-1.5"></div>
+                        <p class="text-[9px] text-slate-300 font-medium tracking-wide">Putri Tercinta dari Bapak Suwanto &amp; Ibu Reni</p>
+                    </div>
+                    
+                    <!-- Simbol Pembatas Tengah -->
+                    <div class="flex items-center justify-center gap-3 py-1 text-gold">
+                        <i class="fa-solid fa-leaf text-[9px] opacity-40 transform -rotate-45"></i>
+                        <div class="text-gold animate-pulse text-xl">
+                            <i class="fa-solid fa-heart text-xs text-softpink"></i>
+                        </div>
+                        <i class="fa-solid fa-leaf text-[9px] opacity-40 transform rotate-45"></i>
+                    </div>
+
+                    <!-- Mempelai Pria DENGAN FOTO ELEGAN TRANSPARAN -->
+                    <div class="bg-gradient-to-b from-denim/90 via-denim/70 to-denim-dark/95 border border-gold/20 rounded-2xl p-5 text-center shadow-xl relative overflow-hidden">
+                        <div class="absolute -left-3 -top-3 text-gold/10 text-4xl transform scale-x-n1"><i class="fa-solid fa-leaf"></i></div>
+
+                        <!-- Lingkaran Foto Pengantin Pria -->
+                        <div class="w-16 h-16 rounded-full border border-gold/40 p-0.5 mx-auto mb-3 shadow-md bg-transparent overflow-hidden">
+                            <img src="fulan.jpg" alt="Fulan" class="w-full h-full rounded-full object-cover" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3656/3656854.png'" />
+                        </div>
+                        <h3 class="font-serif-elegant text-base font-bold text-gold-light tracking-wide">Fulan</h3>
+                        <div class="w-12 h-[1px] bg-softpink/30 mx-auto my-1.5"></div>
+                        <p class="text-[9px] text-slate-300 font-medium tracking-wide">Putra Tercinta dari Bapak Fulan &amp; Ibu Fulanah</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 3: WAKTU -->
+            <section id="sec3" class="reveal-section min-h-[65vh] flex flex-col justify-center items-center text-center relative px-4 bg-denim/40 rounded-3xl border border-softpink/15 py-10 shadow-2xl">
+                <div class="luxury-frame"></div>
+                <div class="luxury-corner lc-tl"></div><div class="luxury-corner lc-tr"></div>
+                <div class="luxury-corner lc-bl"></div><div class="luxury-corner lc-br"></div>
+                
+                <span class="text-[10px] uppercase tracking-[0.25em] text-softpink mb-2 font-bold anim-font flex items-center gap-1.5"><i class="fa-solid fa-seedling text-[8px]"></i> AGENDA BAHAGIA <i class="fa-solid fa-seedling text-[8px]"></i></span>
+                <h2 class="font-serif-elegant text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gold-light to-white flex items-center gap-2 anim-font">
+                    <i class="fa-solid fa-spa text-xs text-gold"></i> Sabtu, 28 November 2026
+                </h2>
+                <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-softpink to-transparent mx-auto my-3"></div>
+
+                <div class="grid grid-cols-2 gap-3 w-full my-3 anim-font px-2 z-10">
+                    <div class="bg-gradient-to-b from-denim-dark/90 to-denim/40 border border-softpink/15 p-4 rounded-xl shadow-lg relative overflow-hidden">
+                        <div class="absolute -right-2 -bottom-2 text-gold/5 text-2xl"><i class="fa-solid fa-leaf"></i></div>
+                        <h4 class="font-bold text-xs text-softpink tracking-wide">Akad Nikah</h4>
+                        <div class="w-6 h-[1px] bg-slate-600 mx-auto my-1"></div>
+                        <p class="text-[9px] text-slate-200 font-semibold">09:00 WIB - Selesai</p>
+                    </div>
+                    <div class="bg-gradient-to-b from-denim-dark/90 to-denim/40 border border-gold/15 p-4 rounded-xl shadow-lg relative overflow-hidden">
+                        <div class="absolute -left-2 -bottom-2 text-softpink/5 text-2xl"><i class="fa-solid fa-leaf"></i></div>
+                        <h4 class="font-bold text-xs text-gold-light tracking-wide">Resepsi</h4>
+                        <div class="w-6 h-[1px] bg-slate-600 mx-auto my-1"></div>
+                        <p class="text-[9px] text-slate-200 font-semibold">11:00 WIB - Selesai</p>
+                    </div>
+                </div>
+
+                <!-- COUNTDOWN BOX PREMIUM GLOW -->
+                <div class="w-[92%] mt-3 bg-gradient-to-r from-slate-950 via-denim to-slate-950 py-4 px-3 rounded-2xl border border-gold/25 shadow-2xl relative overflow-hidden anim-font z-10">
+                    <div class="absolute -right-4 -top-4 text-gold/5 text-4xl"><i class="fa-solid fa-spa"></i></div>
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-gold-light mb-3 font-bold flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-hourglass fa-spin text-[8px] text-softpink"></i> MENGHITUNG HARI
+                    </p>
+                    <div class="grid grid-cols-4 gap-1.5">
+                        <div class="bg-denim-dark/90 py-2 rounded-xl border border-softpink/10"><span class="text-sm font-bold text-white block" id="cd-days">00</span><span class="text-[7px] text-slate-400 uppercase tracking-tight">Hari</span></div>
+                        <div class="bg-denim-dark/90 py-2 rounded-xl border border-softpink/10"><span class="text-sm font-bold text-white block" id="cd-hours">00</span><span class="text-[7px] text-slate-400 uppercase tracking-tight">Jam</span></div>
+                        <div class="bg-denim-dark/90 py-2 rounded-xl border border-softpink/10"><span class="text-sm font-bold text-white block" id="cd-mins">00</span><span class="text-[7px] text-slate-400 uppercase tracking-tight">Menit</span></div>
+                        <div class="bg-denim-dark/90 py-2 rounded-xl border border-softpink/10"><span class="text-sm font-bold text-white block" id="cd-secs">00</span><span class="text-[7px] text-slate-400 uppercase tracking-tight">Detik</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEC 4: DOA & RESTU -->
+            <section id="sec4" class="reveal-section min-h-[60vh] flex flex-col justify-center items-center text-center relative px-4 bg-denim/40 rounded-3xl border border-softpink/15 py-10 shadow-2xl">
+                <div class="luxury-frame"></div>
+                <div class="luxury-corner lc-tl"></div><div class="luxury-corner lc-tr"></div>
+                <div class="luxury-corner lc-bl"></div><div class="luxury-corner lc-br"></div>
+
+                <span class="text-[9px] uppercase tracking-[0.25em] text-gold font-bold mb-1 anim-font">GUEST BOOK</span>
+                <h2 class="font-serif-elegant text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-softpink to-white flex items-center gap-2 anim-font">
+                    <i class="fa-solid fa-leaf text-xs text-softpink"></i> Doa Restu &amp; Cinta
+                </h2>
+                
+                <div class="w-full bg-gradient-to-b from-denim-dark via-denim/80 to-denim-dark border border-softpink/20 p-4 rounded-2xl flex flex-col gap-3 mt-4 shadow-inner z-10 anim-font">
+                    <div class="relative">
+                        <i class="fa-solid fa-signature absolute left-3 top-2.5 text-[10px] text-gold/70"></i>
+                        <input type="text" id="guestName" placeholder="Nama Lengkap Anda" class="w-full text-[11px] bg-denim-dark/90 border border-softpink/20 rounded-lg py-2.5 pl-8 pr-3 text-slate-200 focus:outline-none focus:border-gold/50 transition-all" />
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-envelope absolute left-3 top-3 text-[10px] text-gold/70"></i>
+                        <textarea id="guestMsg" placeholder="Tuliskan ucapan kebaikan & doa restu Anda..." class="w-full h-16 text-[11px] bg-denim-dark/90 border border-softpink/20 rounded-lg py-2.5 pl-8 pr-3 text-slate-200 focus:outline-none focus:border-gold/50 transition-all resize-none"></textarea>
+                    </div>
+                    <button onclick="addWishes()" class="w-full py-2.5 bg-gradient-to-r from-softpink via-rose-300 to-gold-light text-denim-dark text-xs font-bold rounded-lg shadow-xl hover:brightness-105 transition-all duration-300 flex items-center justify-center gap-2 glow-line">
+                        <i class="fa-solid fa-paper-plane text-[9px]"></i> KIRIM DOA RESTU
+                    </button>
+                </div>
+
+                <div class="w-full mt-4 text-left anim-font z-10 px-1">
+                    <div id="wishesContainer" class="w-full h-32 overflow-y-auto custom-scrollbar space-y-2 pr-1">
+                        <div class="bg-gradient-to-r from-denim-dark to-slate-900 border border-gold/15 p-3 rounded-xl shadow-md relative overflow-hidden">
+                            <div class="absolute right-2 top-2 text-softpink/10 text-lg"><i class="fa-solid fa-spa"></i></div>
+                            <span class="font-bold text-gold-light flex items-center gap-1.5 text-[10px]"><i class="fa-solid fa-heart text-softpink text-[8px]"></i> Keluarga Besar</span>
+                            <p class="text-slate-300 mt-1 italic text-[9px] leading-relaxed">"Selamat menempuh hidup baru Fauziah &amp; Fulan! Semoga berkah melimpah dan sakinah mawaddah warahmah selamanya."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION NEW: UCAPAN TERIMA KASIH (CLOSING) -->
+            <section id="sec5" class="reveal-section min-h-[40vh] flex flex-col justify-center items-center text-center relative px-6 bg-gradient-to-b from-denim/40 to-denim-dark/80 rounded-3xl border border-softpink/15 py-12 shadow-2xl overflow-hidden">
+                <div class="luxury-frame"></div>
+                <div class="luxury-corner lc-tl"></div><div class="luxury-corner lc-tr"></div>
+                <div class="luxury-corner lc-bl"></div><div class="luxury-corner lc-br"></div>
+
+                <!-- Ornamen Dekorasi Daun Penutup -->
+                <div class="text-gold text-lg flex justify-center gap-1.5 opacity-70 mb-3 anim-font">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+
+                <div class="space-y-3 max-w-sm anim-font px-2 relative z-10">
+                    <h3 class="font-serif-elegant text-base font-bold text-softpink tracking-wider">Ungkapan Terima Kasih</h3>
+                    <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto my-2"></div>
+                    
+                    <p class="text-[11px] text-slate-300 leading-relaxed font-medium">
+                        Merupakan suatu kehormatan dan kebahagiaan yang tak ternilai bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+                    </p>
+                    
+                    <p class="text-[10px] text-gold-light font-bold tracking-widest uppercase pt-3">
+                        — KAMI YANG BERBAHAGIA, FAUZIAH & FULAN —
+                    </p>
+                </div>
+
+                <div class="text-softpink/20 text-3xl mt-4 animate-pulse"><i class="fa-solid fa-heart"></i></div>
+            </section>
+        </div>
+
+        <!-- FOOTER NAV -->
+        <div class="sticky bottom-0 z-40 bg-denim-dark/95 backdrop-blur-lg border-t border-softpink/20 py-3 px-2 flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.6)]">
+            <button onclick="scrollToSection('sec0')" class="nav-tab active flex flex-col items-center gap-1 text-slate-400" id="tab0"><i class="fa-solid fa-house-user text-xs"></i><span class="text-[8px] font-bold tracking-wider">HOME</span></button>
+            <button onclick="scrollToSection('sec1')" class="nav-tab flex flex-col items-center gap-1 text-slate-400" id="tab1"><i class="fa-solid fa-scroll text-xs"></i><span class="text-[8px] font-bold tracking-wider">QUOTES</span></button>
+            <button onclick="scrollToSection('sec2')" class="nav-tab flex flex-col items-center gap-1 text-slate-400" id="tab2"><i class="fa-solid fa-ring text-xs"></i><span class="text-[8px] font-bold tracking-wider">COUPLE</span></button>
+            <button onclick="scrollToSection('sec3')" class="nav-tab flex flex-col items-center gap-1 text-slate-400" id="tab3"><i class="fa-solid fa-calendar-check text-xs"></i><span class="text-[8px] font-bold tracking-wider">DATE</span></button>
+            <button onclick="scrollToSection('sec4')" class="nav-tab flex flex-col items-center gap-1 text-slate-400" id="tab4"><i class="fa-solid fa-hand-holding-heart text-xs"></i><span class="text-[8px] font-bold tracking-wider">WISHES</span></button>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastMessage" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-[100] bg-slate-950 border border-gold/30 text-[10px] text-white py-1.5 px-4 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300">Pesan</div>
+
+    <script>
+        const audio = document.getElementById('weddingBgm');
+        const audioCtrlBtn = document.getElementById('audioCtrlBtn');
+        const audioIcon = document.getElementById('audioIcon');
+        const musicIconContainer = document.getElementById('musicIconContainer');
+
+        function startUndangan() {
+            const overlay = document.getElementById('welcomeOverlay');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => { overlay.style.display = 'none'; }, 1000);
+
+            audio.play().then(() => {
+                audioIcon.className = "fa-solid fa-pause";
+                audioCtrlBtn.classList.add('bg-pink-600', 'text-white');
+                musicIconContainer.querySelector('i').classList.add('animate-spin');
+            }).catch(e => {
+                console.log("Autoplay ditolak browser:", e);
+            });
+
+            document.getElementById('sec0').classList.add('visible');
+        }
+
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play().then(() => {
+                    audioIcon.className = "fa-solid fa-pause";
+                    audioCtrlBtn.classList.add('bg-pink-600', 'text-white');
+                    musicIconContainer.querySelector('i').classList.add('animate-spin');
+                }).catch(() => {});
+            } else {
+                audio.pause();
+                audioIcon.className = "fa-solid fa-play";
+                audioCtrlBtn.classList.remove('bg-pink-600', 'text-white');
+                musicIconContainer.querySelector('i').classList.remove('animate-spin');
+            }
+        }
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if(el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const sections = document.querySelectorAll('.reveal-section');
+        const tabs = document.querySelectorAll('.nav-tab');
+        window.addEventListener('scroll', () => {
+            let current = "";
+            sections.forEach((sec, index) => {
+                // Membatasi index tab agar tidak melebihi jumlah tombol menu kaki
+                if (sec.getBoundingClientRect().top < window.innerHeight / 2 && index < 5) current = `tab${index}`;
+            });
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.id === current || (!current && tab.id === "tab0")) tab.classList.add('active');
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        sections.forEach(sec => observer.observe(sec));
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastMessage');
+            toast.innerText = msg;
+            toast.classList.replace('opacity-0', 'opacity-100');
+            setTimeout(() => toast.classList.replace('opacity-100', 'opacity-0'), 2500);
+        }
+
+        const targetDate = new Date('Nov 28, 2026 09:00:00').getTime();
+        function updateCountdown() {
+            const diff = targetDate - new Date().getTime();
+            if (diff > 0) {
+                document.getElementById('cd-days').innerText = String(Math.floor(diff / 86400000)).padStart(2, '0');
+                document.getElementById('cd-hours').innerText = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+                document.getElementById('cd-mins').innerText = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+                document.getElementById('cd-secs').innerText = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+            }
+        }
+        setInterval(updateCountdown, 1000); updateCountdown();
+
+        function addWishes() {
+            const name = document.getElementById('guestName').value.trim() || "Sahabat Bahagia";
+            const msg = document.getElementById('guestMsg').value.trim();
+            if (!msg) { showToast("Pesan doa tidak boleh kosong!"); return; }
+            const container = document.getElementById('wishesContainer');
+            const div = document.createElement('div');
+            div.className = "bg-gradient-to-r from-denim-dark to-slate-900 border border-gold/15 p-3 rounded-xl shadow-md relative overflow-hidden";
+            div.innerHTML = `<div class="absolute right-2 top-2 text-softpink/10 text-lg"><i class="fa-solid fa-spa"></i></div><span class="font-bold text-gold-light flex items-center gap-1.5 text-[10px]"><i class="fa-solid fa-heart text-softpink text-[8px]"></i> ${name}</span><p class="text-slate-300 mt-1 italic text-[9px] leading-relaxed">"${msg}"</p>`;
+            container.insertBefore(div, container.firstChild);
+            document.getElementById('guestName').value = ""; document.getElementById('guestMsg').value = "";
+            showToast("Doa restu berhasil dikirim!");
+        }
+    </script>
+</body>
+</html>
